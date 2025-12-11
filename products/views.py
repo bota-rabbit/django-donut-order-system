@@ -4,4 +4,5 @@ from .models import Category, Product
 
 class IndexView(generic.ListView):
     model = Product
+    template_name = "products/index.html"
 
