@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+            <!-- ビューポート設定:スマホやタブレットなどの画面幅に応じて表示を最適化する
+                 width=device-width → デバイスの幅に合わせる
+                 initial-scale=1 → 初期の拡大縮小率を1倍にする
+                 shrink-to-fit=no → コンテンツの自動縮小を無効にする -->
+        <title>ドーナツ販売ページ（仮）</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 40px;
+            }
+            .product {
+                border-bottom: 1px solid #ddd;
+                padding: 12px 0;
+            }
+            .product-name {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .product-price {
+                color: #f06;
+            }
+        </style>
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

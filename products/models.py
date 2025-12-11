@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # ドーナツの種類（カテゴリ）管理
 class Category(models.Model):
     name = models.CharField(max_length=50)  # カテゴリ名
@@ -12,7 +11,6 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-
 # 商品情報（名前・価格・カテゴリ・説明）
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)  # カテゴリと紐付け
@@ -23,7 +21,6 @@ class Product(models.Model):
     is_available = models.BooleanField(default=True)  # 販売中かどうかのフラグ（True＝販売中）
     created_at = models.DateTimeField(auto_now_add=True) 
     updated_at = models.DateTimeField(auto_now=True) 
-
 
     def __str__(self):
         return self.name

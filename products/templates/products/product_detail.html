@@ -1,0 +1,14 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+    <h1> {{ product.name }} </h1>
+
+    <div>
+        <p>価格: {{ product.price }}円</p>
+        <p>説明: {{ product.description }}</p>
+        <p> {{ product.category.name }} </p>
+    </div>
+
+    <a href="{% url 'products:index' %}">一覧に戻る</a>
+
+{% endblock %}
