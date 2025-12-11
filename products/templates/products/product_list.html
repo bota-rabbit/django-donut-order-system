@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品一覧</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+        }
+        .product {
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+        }
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .product-price {
+            color: #f06;
+        }
+    </style>
+</head>
+<body>
+
+<h1>商品一覧</h1>
+
+{% if products %}
+    {% for product in products %}
+    <div class="product">
+        <div class="product-name">{{ product.name }}</div>
+        <div class="product-price">{{ product.price }} 円</div>
+        <div class="product-description">{{ product.description }}</div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>商品がありません。</p>
+{% endif %}
+
+</body>
+</html>
